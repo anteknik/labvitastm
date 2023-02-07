@@ -1,0 +1,478 @@
+INFO  08.02.2023 00:56:42.158 reactor.Flux.MapFuseable.1.info(270)  | onSubscribe([Fuseable] FluxMapFuseable.MapFuseableSubscriber)
+INFO  08.02.2023 00:56:42.256 reactor.Flux.MapFuseable.1.info(270)  | request(6)
+INFO  08.02.2023 00:56:44.301 com.github.astm.lib.tcp.TCP.lambda$new$2(396)  Connected client /127.0.0.1:50743
+ to CLIENT
+INFO  08.02.2023 00:56:45.347 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+SERVER -->> CLIENT SENT
+ENQ(5)
+(SERVER state is NEUTRAL)
+INFO  08.02.2023 00:56:45.576 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED SERVER -->> CLIENT
+ENQ(5)
+(CLIENT state is NEUTRAL)
+INFO  08.02.2023 00:56:45.580 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+ACK(6)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:45.582 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: command: ENQ(5) phase: NEUTRAL
+INFO  08.02.2023 00:56:45.584 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: ACK(6) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:45.594 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+ACK(6)
+(SERVER state is ESTABLISHMENT_MYSELF)
+INFO  08.02.2023 00:56:45.633 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|\^&||||||||||||06/02/2023014917<CR>M|1|H<CR>L|1|<CR><ETX>25<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:45.648 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|\^&||||||||||||06/02/2023014917<CR>M|1|H<CR>L|1|<CR><ETX>25<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:45.651 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|\^&||||||||||||06/02/2023014917<CR>M|1|H<CR>L|1|<CR><ETX>25<CR><LF> phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:45.652 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(799)  The message has an invalid checksum (CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:45.654 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+NAK(21)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:45.660 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: NAK(21) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:45.665 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+NAK(21)
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:45.675 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|\^&||||||||||||06/02/2023014917<CR>M|1|H<CR>L|1|<CR><ETX>22<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:45.682 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|\^&||||||||||||06/02/2023014917<CR>M|1|H<CR>L|1|<CR><ETX>22<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:45.685 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|\^&||||||||||||06/02/2023014917<CR>M|1|H<CR>L|1|<CR><ETX>22<CR><LF> phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:45.685 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+ACK(6)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:45.690 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+ACK(6)
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:45.692 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+SERVER -->> CLIENT SENT
+EOT(4)
+(SERVER state is NEUTRAL)
+INFO  08.02.2023 00:56:45.688 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: ACK(6) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:45.697 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED SERVER -->> CLIENT
+EOT(4)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:45.701 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: command: EOT(4) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:45.700 com.github.astm.lib.tcp.TCP.handlerCommand(1057)  Message
+RECEIVED SERVER -->> CLIENT
+H|\^&||||||||||||06/02/2023014917<CR>M|1|H<CR>L|1|<CR>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:45.704 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+ENQ(5)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+)
+INFO  08.02.2023 00:56:45.710 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+ENQ(5)
+(SERVER state is NEUTRAL)
+ to CLIENT
+INFO  08.02.2023 00:56:45.714 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: ENQ(5) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:46.729 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+SERVER -->> CLIENT SENT
+ENQ(5)
+(SERVER state is ESTABLISHMENT_MYSELF)
+INFO  08.02.2023 00:56:46.735 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED SERVER -->> CLIENT
+ENQ(5)
+(CLIENT state is ESTABLISHMENT_MYSELF)
+INFO  08.02.2023 00:56:46.739 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+ACK(6)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:46.751 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+ACK(6)
+(SERVER state is ESTABLISHMENT_MYSELF)
+INFO  08.02.2023 00:56:46.755 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: command: ENQ(5) phase: ESTABLISHMENT_MYSELF
+INFO  08.02.2023 00:56:46.757 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: ACK(6) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:46.764 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|\^&||||||||||||07/02/2023234200<CR>M|1|V<CR>L|1|<CR><ETX>29<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:46.769 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|\^&||||||||||||07/02/2023234200<CR>M|1|V<CR>L|1|<CR><ETX>29<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:46.772 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(799)  The message has an invalid checksum (CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:46.774 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+NAK(21)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:46.776 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|\^&||||||||||||07/02/2023234200<CR>M|1|V<CR>L|1|<CR><ETX>29<CR><LF> phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:46.780 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+NAK(21)
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:46.781 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: NAK(21) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:46.783 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|\^&||||||||||||07/02/2023234200<CR>M|1|V<CR>L|1|<CR><ETX>26<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:46.790 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|\^&||||||||||||07/02/2023234200<CR>M|1|V<CR>L|1|<CR><ETX>26<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:46.794 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+ACK(6)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:46.798 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+ACK(6)
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:46.801 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+SERVER -->> CLIENT SENT
+EOT(4)
+(SERVER state is NEUTRAL)
+INFO  08.02.2023 00:56:46.809 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED SERVER -->> CLIENT
+EOT(4)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:46.813 com.github.astm.lib.tcp.TCP.handlerCommand(1057)  Message
+RECEIVED SERVER -->> CLIENT
+H|\^&||||||||||||07/02/2023234200<CR>M|1|V<CR>L|1|<CR>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:46.815 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+ENQ(5)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:46.835 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|\^&||||||||||||07/02/2023234200<CR>M|1|V<CR>L|1|<CR><ETX>26<CR><LF> phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:46.845 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: command: EOT(4) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:46.837 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: ACK(6) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:46.849 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: ENQ(5) phase: TRANSFER_REMOTE_SIDE
+)
+INFO  08.02.2023 00:56:46.843 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+ENQ(5)
+(SERVER state is NEUTRAL)
+ to CLIENT
+INFO  08.02.2023 00:56:47.863 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+SERVER -->> CLIENT SENT
+ENQ(5)
+(SERVER state is ESTABLISHMENT_MYSELF)
+INFO  08.02.2023 00:56:47.873 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED SERVER -->> CLIENT
+ENQ(5)
+(CLIENT state is ESTABLISHMENT_MYSELF)
+INFO  08.02.2023 00:56:47.876 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+ACK(6)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:47.882 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: command: ENQ(5) phase: ESTABLISHMENT_MYSELF
+INFO  08.02.2023 00:56:47.884 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: ACK(6) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:47.895 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+ACK(6)
+(SERVER state is ESTABLISHMENT_MYSELF)
+INFO  08.02.2023 00:56:47.948 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|`^&||||||||||||07/02/2023234321<CR>M|1|H<CR>L|1|<CR><ETX>1F<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:47.957 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|`^&||||||||||||07/02/2023234321<CR>M|1|H<CR>L|1|<CR><ETX>1F<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:47.961 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(799)  The message has an invalid checksum (CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:47.963 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+NAK(21)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:47.974 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|`^&||||||||||||07/02/2023234321<CR>M|1|H<CR>L|1|<CR><ETX>1F<CR><LF> phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:47.985 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: NAK(21) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:48.014 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+NAK(21)
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:48.037 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|`^&||||||||||||07/02/2023234321<CR>M|1|H<CR>L|1|<CR><ETX>1C<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:48.057 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|`^&||||||||||||07/02/2023234321<CR>M|1|H<CR>L|1|<CR><ETX>1C<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:48.067 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(799)  The message has an invalid checksum (CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:48.069 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+NAK(21)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:48.139 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|`^&||||||||||||07/02/2023234321<CR>M|1|H<CR>L|1|<CR><ETX>1C<CR><LF> phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:48.141 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: NAK(21) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:48.157 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+NAK(21)
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:48.271 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|\^&||||||||||||07/02/2023234321<CR>M|1|H<CR>L|1|<CR><ETX>1C<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:48.278 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|\^&||||||||||||07/02/2023234321<CR>M|1|H<CR>L|1|<CR><ETX>1C<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:48.280 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+ACK(6)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:48.281 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|\^&||||||||||||07/02/2023234321<CR>M|1|H<CR>L|1|<CR><ETX>1C<CR><LF> phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:48.283 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: ACK(6) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:48.284 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+ACK(6)
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:48.287 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+SERVER -->> CLIENT SENT
+EOT(4)
+(SERVER state is NEUTRAL)
+INFO  08.02.2023 00:56:48.291 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED SERVER -->> CLIENT
+EOT(4)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:48.294 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: command: EOT(4) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:48.295 com.github.astm.lib.tcp.TCP.handlerCommand(1057)  Message
+RECEIVED SERVER -->> CLIENT
+H|\^&||||||||||||07/02/2023234321<CR>M|1|H<CR>L|1|<CR>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:48.297 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+ENQ(5)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+)
+INFO  08.02.2023 00:56:48.302 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+ENQ(5)
+(SERVER state is NEUTRAL)
+ to CLIENT
+INFO  08.02.2023 00:56:48.307 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: ENQ(5) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:49.307 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+SERVER -->> CLIENT SENT
+ENQ(5)
+(SERVER state is ESTABLISHMENT_MYSELF)
+INFO  08.02.2023 00:56:49.310 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED SERVER -->> CLIENT
+ENQ(5)
+(CLIENT state is ESTABLISHMENT_MYSELF)
+INFO  08.02.2023 00:56:49.313 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+ACK(6)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.314 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: command: ENQ(5) phase: ESTABLISHMENT_MYSELF
+INFO  08.02.2023 00:56:49.317 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: ACK(6) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:49.317 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+ACK(6)
+(SERVER state is ESTABLISHMENT_MYSELF)
+INFO  08.02.2023 00:56:49.321 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>14<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:49.326 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>14<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.329 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(799)  The message has an invalid checksum (CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.330 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+NAK(21)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.334 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+NAK(21)
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:49.336 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>14<CR><LF> phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:49.338 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:49.344 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.346 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(799)  The message has an invalid checksum (CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.347 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: NAK(21) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:49.347 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+NAK(21)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.351 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+NAK(21)
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:49.355 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+WARN  08.02.2023 00:56:49.357 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 1 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.359 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF> phase: TRANSFER_REMOTE_SIDE
+WARN  08.02.2023 00:56:49.359 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 2 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.361 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 3 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.362 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: NAK(21) phase: TRANSFER_REMOTE_SIDE
+WARN  08.02.2023 00:56:49.364 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 4 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.366 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 5 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.373 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.377 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(799)  The message has an invalid checksum (CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.377 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF> phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:49.378 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+NAK(21)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.382 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: NAK(21) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:49.383 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+NAK(21)
+(SERVER state is TRANSFER_MYSELF)
+WARN  08.02.2023 00:56:49.385 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 1 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.388 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 2 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.389 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 3 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.391 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 4 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.392 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 5 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.395 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+WARN  08.02.2023 00:56:49.397 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 1 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.399 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 2 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.401 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 3 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.403 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 4 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.404 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 5 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.408 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.411 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(799)  The message has an invalid checksum (CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.412 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF> phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:49.413 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+NAK(21)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.416 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+NAK(21)
+(SERVER state is TRANSFER_MYSELF)
+INFO  08.02.2023 00:56:49.417 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: NAK(21) phase: TRANSFER_REMOTE_SIDE
+WARN  08.02.2023 00:56:49.419 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 1 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.421 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 2 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.435 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 3 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.437 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 4 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.439 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 5 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.442 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+WARN  08.02.2023 00:56:49.444 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 1 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.446 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 2 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.448 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 3 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.450 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 4 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.452 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 5 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.477 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.492 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(799)  The message has an invalid checksum (CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.494 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+NAK(21)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.507 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|`!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF> phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:49.508 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: NAK(21) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:49.521 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+NAK(21)
+(SERVER state is TRANSFER_MYSELF)
+WARN  08.02.2023 00:56:49.527 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 1 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.529 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 2 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.533 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 3 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.534 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 4 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.536 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 5 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.539 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  frame
+SERVER -->> CLIENT SENT
+<STX>1H|\!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF>
+(SERVER state is TRANSFER_MYSELF)
+WARN  08.02.2023 00:56:49.544 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 1 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.555 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 2 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.559 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 3 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.560 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 4 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.562 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 5 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.565 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(692)  Bytes
+RECEIVED SERVER -->> CLIENT
+<STX>1H|\!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.567 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+ACK(6)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.571 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+ACK(6)
+(SERVER state is TRANSFER_MYSELF)
+WARN  08.02.2023 00:56:49.573 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 1 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.574 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 2 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.575 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: bytes: <STX>1H|\!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR><ETX>11<CR><LF> phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:49.576 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: ACK(6) phase: TRANSFER_REMOTE_SIDE
+WARN  08.02.2023 00:56:49.575 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 3 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.577 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 4 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.579 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 5 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.580 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+SERVER -->> CLIENT SENT
+EOT(4)
+(SERVER state is NEUTRAL)
+WARN  08.02.2023 00:56:49.581 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 1 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.582 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 2 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.583 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 3 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.585 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 4 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.586 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 5 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.590 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED SERVER -->> CLIENT
+EOT(4)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.593 com.github.astm.lib.tcp.TCP.handlerCommand(1057)  Message
+RECEIVED SERVER -->> CLIENT
+H|\!~|(0:0-144795892#305747308, 571)||DxH|||||LIS||P|LIS2-A|20211028082643<CR>Q|1|!000004287945||ALL||||||||O<CR>L|1|N<CR>
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.594 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+CLIENT -->> SERVER SENT
+ENQ(5)
+(CLIENT state is TRANSFER_REMOTE_SIDE)
+INFO  08.02.2023 00:56:49.600 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED CLIENT -->> SERVER
+ENQ(5)
+(SERVER state is NEUTRAL)
+WARN  08.02.2023 00:56:49.604 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 1 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.605 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 2 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.607 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 3 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.608 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 4 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.609 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(660)  Failed try 5 pull frame to stdout (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.610 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1205)  command
+SERVER -->> CLIENT SENT
+NAK(21)
+(SERVER state is ESTABLISHMENT_REMOTE_SIDE)
+WARN  08.02.2023 00:56:49.612 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 1 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.613 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: command: EOT(4) phase: TRANSFER_REMOTE_SIDE
+WARN  08.02.2023 00:56:49.613 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 2 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.614 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 3 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.615 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 4 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+WARN  08.02.2023 00:56:49.616 com.github.astm.lib.tcp.TCP.sendToRemoteSide(1220)  Failed try 5 pull frame to stdin (FAIL_ZERO_SUBSCRIBER) 
+INFO  08.02.2023 00:56:49.619 com.github.astm.lib.tcp.TCP.lambda$handlerOnePeer$7(643)  Command
+RECEIVED SERVER -->> CLIENT
+NAK(21)
+(CLIENT state is ESTABLISHMENT_MYSELF)
+)
+INFO  08.02.2023 00:56:49.622 com.github.astm.lib.TCPTest.lambda$tcp$0(68)  STDIN: frame: ENQ(5) phase: TRANSFER_REMOTE_SIDE
+INFO  08.02.2023 00:56:49.624 com.github.astm.lib.TCPTest.lambda$tcp$1(75)  STDOUT: command: NAK(21) phase: ESTABLISHMENT_MYSELF
